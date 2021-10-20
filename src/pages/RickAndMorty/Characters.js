@@ -49,11 +49,18 @@ function Characters(props) {
   };
 
   const addPreferredCharacter = (character) => {
-    const found = preferred.some(
-      (characterEach) => characterEach.id === character.id
-    );
-    if (!found) {
-      const newPreferredCharacter = [...preferred, character];
+    try {
+      const found = preferred.some(
+        (characterEach) => characterEach.id === character.id
+      );
+      if (!found) {
+        const newPreferredCharacter = [...preferred, character];
+        setPreferred(newPreferredCharacter);
+        saveToLocalStorage(newPreferredCharacter);
+      }
+    } catch (error) {
+      localStorage.setItem("react-rick-and-morty-preferred-characters", "[]");
+      const newPreferredCharacter = [character];
       setPreferred(newPreferredCharacter);
       saveToLocalStorage(newPreferredCharacter);
     }
