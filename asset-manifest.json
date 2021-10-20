@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-rick-morty-api-cdmedtech/static/css/main.e9808968.chunk.css",
+    "main.js": "/react-rick-morty-api-cdmedtech/static/js/main.1473e084.chunk.js",
+    "main.js.map": "/react-rick-morty-api-cdmedtech/static/js/main.1473e084.chunk.js.map",
+    "runtime-main.js": "/react-rick-morty-api-cdmedtech/static/js/runtime-main.f8df7380.js",
+    "runtime-main.js.map": "/react-rick-morty-api-cdmedtech/static/js/runtime-main.f8df7380.js.map",
+    "static/js/2.fb272604.chunk.js": "/react-rick-morty-api-cdmedtech/static/js/2.fb272604.chunk.js",
+    "static/js/2.fb272604.chunk.js.map": "/react-rick-morty-api-cdmedtech/static/js/2.fb272604.chunk.js.map",
+    "static/js/3.3e07c3a2.chunk.js": "/react-rick-morty-api-cdmedtech/static/js/3.3e07c3a2.chunk.js",
+    "static/js/3.3e07c3a2.chunk.js.map": "/react-rick-morty-api-cdmedtech/static/js/3.3e07c3a2.chunk.js.map",
+    "index.html": "/react-rick-morty-api-cdmedtech/index.html",
+    "static/css/main.e9808968.chunk.css.map": "/react-rick-morty-api-cdmedtech/static/css/main.e9808968.chunk.css.map",
+    "static/js/2.fb272604.chunk.js.LICENSE.txt": "/react-rick-morty-api-cdmedtech/static/js/2.fb272604.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f8df7380.js",
+    "static/js/2.fb272604.chunk.js",
+    "static/css/main.e9808968.chunk.css",
+    "static/js/main.1473e084.chunk.js"
+  ]
+}
