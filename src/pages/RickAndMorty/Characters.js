@@ -49,9 +49,14 @@ function Characters(props) {
   };
 
   const addPreferredCharacter = (character) => {
-    const newPreferredCharacter = [...preferred, character];
-    setPreferred(newPreferredCharacter);
-    saveToLocalStorage(newPreferredCharacter);
+    const found = preferred.some(
+      (characterEach) => characterEach.id === character.id
+    );
+    if (!found) {
+      const newPreferredCharacter = [...preferred, character];
+      setPreferred(newPreferredCharacter);
+      saveToLocalStorage(newPreferredCharacter);
+    }
   };
 
   const removePreferredCharacter = (character) => {
@@ -101,22 +106,28 @@ function Characters(props) {
         })}
       </div>
 
-      <h2 className="green-text">Preferred Characters</h2>
-      <hr />
-      <div className="row">
-        {preferred.map((character) => {
-          return (
-            <div className="col s2" key={character.id}>
-              <Character
-                key={character.id}
-                character={character}
-                handlePreferredClick={() => removePreferredCharacter(character)}
-                componentToAdd={RemovePreferredCharacter}
-              />
-            </div>
-          );
-        })}
-      </div>
+      {preferred === null ? null : (
+        <>
+          <h2 className="green-text">Preferred Characters</h2>
+          <hr />
+          <div className="row">
+            {preferred.map((character) => {
+              return (
+                <div className="col s2" key={character.id}>
+                  <Character
+                    key={character.id}
+                    character={character}
+                    handlePreferredClick={() =>
+                      removePreferredCharacter(character)
+                    }
+                    componentToAdd={RemovePreferredCharacter}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
     </div>
   );
 }
